@@ -2,8 +2,7 @@
 <resources>
     <color name="colorPrimary">#E91E63</color>
     <color name="colorPrimaryDark">#D81B60</color>
-    <color name="colorAccent">#000000</color>
-    <color name="AZUR">#F1F5F8</color>
-    <color name="WHITE">#FFFFFF</color>
-    <color name="BLUE">#0000FF</color>
+    <color name="colorAccent">#808080</color>
+    <color name="azur">#F1F5F8</color>
+    <color name="White">#ffffff</color>
 </resources>
