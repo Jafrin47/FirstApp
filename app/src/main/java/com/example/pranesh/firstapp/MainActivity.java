@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onButtonClick(View v) {
-        if (v.getId() == R.id.Blogin) {
+        if (v.getId() == R.id.Bsignup) {
             EditText a = (EditText) findViewById(R.id.TFusername);
             String str = a.getText().toString();
 
@@ -31,5 +31,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void onButtonClick1(View v) {
+        if (v.getId() == R.id.Blogin) {
+            EditText a = (EditText) findViewById(R.id.TFusername);
+            String s = a.getText().toString();
 
+            Intent i = new Intent(MainActivity.this, Display.class);
+            i.putExtra("Username", s);
+            startActivity(i);
+        }
+    }
 }
