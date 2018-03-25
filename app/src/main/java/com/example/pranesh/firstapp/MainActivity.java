@@ -1,84 +1,66 @@
 package com.example.pranesh.firstapp;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Display;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    private EditText Name;
+    private EditText Password;
+    private Button Login;
+    private EditText Email;
+    private TextView Info;
+    private Button Signup;
+    private int counter = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        Name = (EditText) findViewById(R.id.fpName);
+        Password = (EditText) findViewById(R.id.fpPassword);
+        Email = (EditText) findViewById(R.id.fpEmail);
+        Login = (Button) findViewById(R.id.fpbtnLogin);
+        Signup = (Button) findViewById(R.id.fpbtnSignup);
+        Info = (TextView) findViewById(R.id.fptvInfo);
+
+        Info.setText("No of attempts remaining: 5");
+
+        Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                validate(Name.getText().toString(), Password.getText().toString(), Email.getText().toString());
+            }
+        });
+    }
+
+    private void validate(String userName, String userPassword, String userEmail) {
+        if ((userName.equals("Admin")) && (userPassword.equals("1234")) && (userEmail.equals("user@admin"))) {
+            Intent i = new Intent(MainActivity.this, display.class);
+            startActivity(i);
+        } else {
+            counter--;
+
+            Info.setText("No of attempts remaining: " + String.valueOf(counter));
+
+            if (counter == 0) {
+                Login.setEnabled(false);
+            }
+        }
     }
 
     public void onButtonClick(View v) {
-        if (v.getId() == R.id.Bsignup) {
-            EditText a = (EditText) findViewById(R.id.TFusername);
-            String str = a.getText().toString();
-
-            Intent i = new Intent(MainActivity.this, Display.class);
-            i.putExtra("Username", str);
-            startActivity(i);
-        }
-        if (v.getId() == R.id.Bsignup) {
+        if (v.getId() == R.id.fpbtnSignup) {
             Intent i = new Intent(MainActivity.this, signup.class);
             startActivity(i);
         }
     }
-
-
-    public void onButtonClick1(View v) {
-        if (v.getId() == R.id.Blogin) {
-            EditText a = (EditText) findViewById(R.id.TFusername);
-            String s = a.getText().toString();
-
-            Intent i = new Intent(MainActivity.this, Display.class);
-            i.putExtra("Username", s);
-            startActivity(i);
-        }
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        //Uncomment the below code to Set the message and title from the strings.xml file
-        //builder.setMessage(R.string.dialog_message) .setTitle(R.string.dialog_title);
-
-        //Setting message manually and performing action on button click
-        builder.setMessage("Do you want to close this application ?")
-                .setCancelable(false)
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        finish();
-                    }
-                })
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        //  Action for 'NO' Button
-                        dialog.cancel();
-                    }
-                });
-
-        //Creating dialog box
-        AlertDialog alert = builder.create();
-        //Setting the title manually
-        alert.setTitle("AlertDialogExample");
-        alert.show();
-        setContentView(R.layout.activity_main);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.activity_main, menu);
-        return true;
-    }
-
-}
 }

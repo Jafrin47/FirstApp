@@ -12,17 +12,19 @@ import android.widget.Toast;
 
 public class signup extends Activity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
     }
 
+
     public void onSignUpClick(View v) {
         if (v.getId() == R.id.Bsignupbutton) {
             EditText name = (EditText) findViewById(R.id.TFname);
             EditText email = (EditText) findViewById(R.id.TFemail);
-            EditText uname = (EditText) findViewById(R.id.TFusername);
+            EditText uname = (EditText) findViewById(R.id.TFuname);
             EditText pass1 = (EditText) findViewById(R.id.TFpass1);
             EditText pass2 = (EditText) findViewById(R.id.TFpass2);
 
@@ -39,8 +41,6 @@ public class signup extends Activity {
         }
 
     }
-
-
 }
 
 
