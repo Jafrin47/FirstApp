@@ -21,12 +21,13 @@ import com.google.firebase.database.FirebaseDatabase;
  */
 
 public class signup extends Activity {
-    private EditText Name;
+    private EditText Name;                  //initialling name variable
     private EditText userName;
     private EditText Password1;
     private EditText Password2;
     private EditText Email;
     private Button Signup;
+
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference mRootReference = firebaseDatabase.getReference();
