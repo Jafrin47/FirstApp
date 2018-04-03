@@ -9,6 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText Name;
@@ -18,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
     private TextView Info;
     private Button Signup;
     private int counter = 5;
+    private FirebaseAuth firebaseAuth;
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference mRootReference = firebaseDatabase.getReference();
+    private DatabaseReference mChildReference = mRootReference.child("message");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         Login = (Button) findViewById(R.id.fpbtnLogin);
         Signup = (Button) findViewById(R.id.fpbtnSignup);
         Info = (TextView) findViewById(R.id.fptvInfo);
+        firebaseAuth = FirebaseAuth.getInstance();
+
 
         Info.setText("No of attempts remaining: 5");
 

@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:text="Sign In"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -34,7 +34,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/edittextstyle"
                 android:hint="Username" />
 
@@ -43,7 +43,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/edittextstyle"
                 android:hint="Email" />
 
@@ -52,10 +52,18 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/edittextstyle"
                 android:hint="Password"
                 android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/forgetpass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="Forget Password?" />
 
             <Button
                 android:id="@+id/fpbtnLogin"
@@ -79,21 +87,18 @@
                 android:text="Sign Up"
                 android:textColor="@color/White" />
 
-
             <TextView
                 android:id="@+id/fptvInfo"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:text="No of attempts remaining : "
-                android:textAlignment="center"
-                android:textSize="17sp" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="No of attempts remaining: " />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:background="@color/colorPrimary"
                 android:orientation="vertical">
 
@@ -108,12 +113,7 @@
                     android:textColor="@color/White"
                     android:textSize="23sp" />
 
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="8dp"
-                    android:text="Forget Password?" />
+
             </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>
