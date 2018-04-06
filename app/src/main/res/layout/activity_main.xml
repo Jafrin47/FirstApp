@@ -38,14 +38,7 @@
                 android:background="@drawable/edittextstyle"
                 android:hint="Username" />
 
-            <EditText
-                android:id="@+id/fpEmail"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/edittextstyle"
-                android:hint="Email" />
+
 
             <EditText
                 android:id="@+id/fpPassword"
@@ -108,7 +101,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="13dp"
                     android:fontFamily="serif-monospace"
-                    android:text="Already have account?\t\t\tThen Press Sign Up"
+                    android:text="Don't have account?\t\t\tThen Press Sign Up"
                     android:textAlignment="center"
                     android:textColor="@color/White"
                     android:textSize="23sp" />

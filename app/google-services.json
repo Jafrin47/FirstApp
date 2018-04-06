@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "173392182938",
-    "firebase_url": "https://firstapp-1f6eb.firebaseio.com",
-    "project_id": "firstapp-1f6eb",
-    "storage_bucket": "firstapp-1f6eb.appspot.com"
+    "project_number": "68233440331",
+    "firebase_url": "https://mini-project-28560.firebaseio.com",
+    "project_id": "mini-project-28560",
+    "storage_bucket": "mini-project-28560.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:173392182938:android:07a2c3784cf43818",
+        "mobilesdk_app_id": "1:68233440331:android:07a2c3784cf43818",
         "android_client_info": {
           "package_name": "com.example.pranesh.firstapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "173392182938-amv2bplad9tkmgnlq40787i8hfu4siir.apps.googleusercontent.com",
+          "client_id": "68233440331-me08cadl5585q8gt0let5cs349etgee5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD-eqs9V0Ejs8ZaBrtz1ek18RQldravPGs"
+          "current_key": "AIzaSyCqXpIobp4ntSWrK9fpG9ZC7PGCkD2CHQ8"
         }
       ],
       "services": {
